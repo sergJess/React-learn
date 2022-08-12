@@ -9,7 +9,7 @@ class Nav extends React.Component {
         <Link className="nav-link" to="/">
           Home
         </Link>
-        <Link className="nav-link" to="about-us">
+        <Link className="nav-link" to="/about-us">
           About US
         </Link>
         <Outlet />
