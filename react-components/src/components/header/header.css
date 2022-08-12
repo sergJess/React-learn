@@ -1,0 +1,9 @@
+.header{
+padding: 1rem 0.8rem;
+background: rgb(17,17,134);
+background: linear-gradient(90deg, rgba(17,17,134,0.8859837636226365) 0%, rgba(2,0,36,1) 65%, rgba(0,212,255,1) 100%);
+}
+.header-about-us{
+	background: rgb(17,17,134);
+background: linear-gradient(90deg, rgba(132, 17, 134, 0.886) 0%, rgb(88, 65, 149) 65%, rgb(111, 0, 255) 100%);
+}
