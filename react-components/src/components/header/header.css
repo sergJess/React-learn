@@ -1,4 +1,7 @@
 .header{
+	display: flex;
+	justify-content: space-between;
+	column-gap: 3rem;
 padding: 1rem 0.8rem;
 background: rgb(17,17,134);
 background: linear-gradient(90deg, rgba(17,17,134,0.8859837636226365) 0%, rgba(2,0,36,1) 65%, rgba(0,212,255,1) 100%);
