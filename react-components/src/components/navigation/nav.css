@@ -7,5 +7,10 @@
 	font-size: 2.2rem;
 	font-style: italic;
 	color: #6f169c;
+	text-decoration: none;
 	letter-spacing: 0.3rem;
+	transition: color 0.3s ease;
+}
+.nav-link:hover{
+	color: #ba4ad8;
 }
