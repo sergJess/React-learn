@@ -1,0 +1,11 @@
+.nav{
+	display: flex;
+	column-gap: 1.6rem;
+}
+
+.nav-link{
+	font-size: 2.2rem;
+	font-style: italic;
+	color: #6f169c;
+	letter-spacing: 0.3rem;
+}

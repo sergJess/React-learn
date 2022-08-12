@@ -5,7 +5,7 @@ class HomePage extends React.Component {
   render(): JSX.Element {
     return (
       <div className="home-page">
-        <Header />;
+        <Header />;<h1>Hello Jessie</h1>
       </div>
     );
   }
