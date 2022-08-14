@@ -1,22 +1,28 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
-import Header from '../header/header';
 import './nav.css';
 
 // interface NavProps {
 //   element: HTMLElement;
 // }
 class Nav extends React.Component {
-  // constructor(props: NavProps) {
-  //   super(props);
-  // }
+  field: string;
+  click: Function;
+  constructor(props = {}) {
+    super(props);
+    this.field = 'Jess';
+    this.click = this.onClickLink.bind(this);
+  }
+  onClickLink(): void {
+    console.log(this.field);
+  }
   render(): JSX.Element {
     return (
-      <nav className="nav">
+      <nav onClick={this.click()} className="nav">
         <Link className="nav-link" to="/">
           Home
         </Link>
-        <Link onClick={() => headerLog(<Header></Header>)} className="nav-link" to="/about-us">
+        <Link className="nav-link" to="/about-us">
           About US
         </Link>
         <Outlet />
@@ -35,7 +41,3 @@ export default Nav;
 //     header.classList.add('header-about-us');
 //   }
 // }
-
-function headerLog(el: JSX.Element) {
-  console.log(el);
-}

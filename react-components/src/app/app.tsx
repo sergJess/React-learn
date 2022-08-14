@@ -8,7 +8,7 @@ class App extends React.Component {
   render(): JSX.Element {
     return (
       <BrowserRouter>
-        <Header />
+        <Header stateBackgroundAboutUs="x" />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="about-us" element={<ABoutUsPage />} />
