@@ -3,12 +3,14 @@ import './card.css';
 type cardTitle = string;
 type cardImgSrc = string;
 type cardDescription = string;
-interface ICard {
+type cardId = number;
+export interface ICard {
   title: cardTitle;
   src: cardImgSrc;
   description: cardDescription;
+  id: cardId;
 }
-class Card extends React.Component<ICard> {
+export class Card extends React.Component<ICard> {
   constructor(props: ICard) {
     super(props);
   }
@@ -24,5 +26,3 @@ class Card extends React.Component<ICard> {
     );
   }
 }
-
-export default Card;
