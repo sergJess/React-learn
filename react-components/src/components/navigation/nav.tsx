@@ -2,27 +2,31 @@ import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import './nav.css';
 
-// interface NavProps {
-//   element: HTMLElement;
-// }
 class Nav extends React.Component {
-  field: string;
   click: Function;
   constructor(props = {}) {
     super(props);
-    this.field = 'Jess';
     this.click = this.onClickLink.bind(this);
   }
-  onClickLink(): void {
-    console.log(this.field);
+  onClickLink(e: React.MouseEvent<HTMLElement>): void {
+    const target = e.target as HTMLElement;
+    if (target.classList.contains('nav-link')) {
+      const parent = target.parentElement;
+      if (parent) {
+        parent.querySelectorAll('.nav-link').forEach((item) => {
+          item.classList.remove('nav-link-active');
+        });
+      }
+      target.classList.add('nav-link-active');
+    }
   }
   render(): JSX.Element {
     return (
-      <nav onClick={this.click()} className="nav">
-        <Link className="nav-link" to="/">
+      <nav className="nav">
+        <Link onClick={this.onClickLink} className="nav-link" to="/">
           Home
         </Link>
-        <Link className="nav-link" to="/about-us">
+        <Link onClick={this.onClickLink} className="nav-link" to="/about-us">
           About US
         </Link>
         <Outlet />
@@ -31,13 +35,3 @@ class Nav extends React.Component {
   }
 }
 export default Nav;
-
-// function clickToAboutUs(element: HTMLElement): void {
-//   const elem = element;
-//   const parent = elem.parentNode;
-//   console.log(parent);
-//   if (parent) {
-//     const header = parent.parentNode as HTMLElement;
-//     header.classList.add('header-about-us');
-//   }
-// }
