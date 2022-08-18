@@ -7,11 +7,17 @@
 	padding: 0.4rem 0.8rem;
 	color: #fff;
 	background-color: rgba(255, 255, 255, 0.7);
+}
+.search-loop-visible{
 	background-image: url('../../../assets/img/search/search.svg');
 	background-position: 20px center;
 	background-repeat: no-repeat;
 	background-size: 24px;
 }
+.search-loop-invisible{
+		background-image: none;
+}
+
 .search-input:focus{
 	outline: none;
 	background-image: none;
